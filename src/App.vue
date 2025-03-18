@@ -1,3 +1,4 @@
+// @ts-nocheck
 <template>
   <div class="min-h-screen bg-white">
     <!-- Navegação -->
@@ -131,7 +132,7 @@
         'opacity-0 pointer-events-none': !showBackToTop,
         'opacity-100': showBackToTop,
         'scale-90': buttonPressed,
-        'scale-100': !buttonPressed
+        'scale-100': !buttonPressed,
       }"
     >
       <svg
@@ -168,7 +169,7 @@ const buttonPressed = ref(false);
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 };
 

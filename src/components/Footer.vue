@@ -150,7 +150,7 @@
             <p class="text-gray-500 text-xs mt-1">
               Desenvolvido por
               <a
-                href="https://nata-portifolio.vercel.app"
+                href="https://nata-portfolio.vercel.app"
                 target="_blank"
                 class="hover:text-pink-400 transition-colors"
                 >© {{ new Date().getFullYear() }} NR.dev</a
