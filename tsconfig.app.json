@@ -13,7 +13,9 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "composite": true,
+    "noEmit": false
   },
   "include": [
     "src/**/*.ts",
