@@ -120,11 +120,21 @@
 
       <div class="text-center mt-12">
         <a
-          href="#contact"
-          class="inline-block border border-pink-600 text-pink-600 hover:bg-pink-50 font-medium py-3 px-8 rounded-md transition-colors"
+          @click="(e) => scrollToSection(e, '#contact')"
+          class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition-all hover:shadow-pink-900/70 cursor-pointer"
           >Solicite um Catálogo Completo</a
         >
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const scrollToSection = (event, sectionId) => {
+  event.preventDefault();
+  const section = document.querySelector(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+</script>

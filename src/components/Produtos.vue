@@ -42,11 +42,11 @@
               recheios gourmet que derretem na boca.
             </p>
             <div class="flex justify-between items-center">
-              <span class="text-pink-600 font-bold">R$25,00 - R$75,00</span>
+              <!-- <span class="text-pink-600 font-bold">R$25,00 - R$75,00</span> -->
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-5 rounded-full transition-all hover:shadow-md transform hover:-translate-y-1"
               >
-                Encomendar
+              <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -70,11 +70,11 @@
               vibrantes, perfeitos para qualquer ocasião.
             </p>
             <div class="flex justify-between items-center">
-              <span class="text-pink-600 font-bold">R$18,00 - R$45,00</span>
+              <!-- <span class="text-pink-600 font-bold">R$18,00 - R$45,00</span> -->
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                Encomendar
+                <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -98,11 +98,11 @@
               disponíveis em sabores tradicionais e exclusivos.
             </p>
             <div class="flex justify-between items-center">
-              <span class="text-pink-600 font-bold">R$15,00 - R$35,00</span>
+              <!-- <span class="text-pink-600 font-bold">R$15,00 - R$35,00</span> -->
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                Encomendar
+                <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a> 
               </button>
             </div>
           </div>
@@ -126,11 +126,11 @@
               brigadeiros, beijinhos e quindins.
             </p>
             <div class="flex justify-between items-center">
-              <span class="text-pink-600 font-bold">R$20,00 - R$50,00</span>
+              <!-- <span class="text-pink-600 font-bold">R$20,00 - R$50,00</span> -->
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                Encomendar
+              <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -154,11 +154,11 @@
               celebrações especiais e eventos.
             </p>
             <div class="flex justify-between items-center">
-              <span class="text-pink-600 font-bold">R$45,00 - R$120,00</span>
+              <!-- <span class="text-pink-600 font-bold">R$45,00 - R$120,00</span> -->
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                Encomendar
+              <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -182,11 +182,11 @@
               populares, o presente perfeito para qualquer ocasião.
             </p>
             <div class="flex justify-between items-center">
-              <span class="text-pink-600 font-bold">R$60,00 - R$150,00</span>
+              <!-- <span class="text-pink-600 font-bold">R$60,00 - R$150,00</span> -->
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                Encomendar
+                <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -195,11 +195,21 @@
 
       <div class="text-center mt-16">
         <a
-          href="#contact"
-          class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition-all hover:shadow-lg transform hover:-translate-y-1"
+          @click="(e) => scrollToSection(e, '#contact')"
+          class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition-all hover:shadow-pink-900/70 cursor-pointer"
           >Solicite um Orçamento Personalizado</a
         >
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const scrollToSection = (event, sectionId) => {
+  event.preventDefault();
+  const section = document.querySelector(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+</script>

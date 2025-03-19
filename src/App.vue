@@ -17,28 +17,28 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a
-                href="#home"
-                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                @click="(e) => scrollToSection(e, '#home')"
+                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Início</a
               >
               <a
-                href="#about"
-                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                @click="(e) => scrollToSection(e, '#about')"
+                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Sobre</a
               >
               <a
-                href="#products"
-                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                @click="(e) => scrollToSection(e, '#products')"
+                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Produtos</a
               >
               <a
-                href="#gallery"
-                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                @click="(e) => scrollToSection(e, '#gallery')"
+                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Galeria</a
               >
               <a
-                href="#contact"
-                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                @click="(e) => scrollToSection(e, '#contact')"
+                class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Contato</a
               >
             </div>
@@ -81,33 +81,28 @@
           class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-b border-gray-100"
         >
           <a
-            href="#home"
-            @click="mobileMenuOpen = false"
-            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium"
+            @click="(e) => { scrollToSection(e, '#home'); mobileMenuOpen = false; }"
+            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Início</a
           >
           <a
-            href="#about"
-            @click="mobileMenuOpen = false"
-            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium"
+            @click="(e) => { scrollToSection(e, '#about'); mobileMenuOpen = false; }"
+            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Sobre</a
           >
           <a
-            href="#products"
-            @click="mobileMenuOpen = false"
-            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium"
+            @click="(e) => { scrollToSection(e, '#products'); mobileMenuOpen = false; }"
+            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Produtos</a
           >
           <a
-            href="#gallery"
-            @click="mobileMenuOpen = false"
-            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium"
+            @click="(e) => { scrollToSection(e, '#gallery'); mobileMenuOpen = false; }"
+            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Galeria</a
           >
           <a
-            href="#contact"
-            @click="mobileMenuOpen = false"
-            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium"
+            @click="(e) => { scrollToSection(e, '#contact'); mobileMenuOpen = false; }"
+            class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Contato</a
           >
         </div>
@@ -166,6 +161,14 @@ const mobileMenuOpen = ref(false);
 const showBackToTop = ref(false);
 const buttonPressed = ref(false);
 
+const scrollToSection = (event, sectionId) => {
+  event.preventDefault();
+  const section = document.querySelector(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
@@ -193,7 +196,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Estilizando a barra de rolagem */
 ::-webkit-scrollbar {
   width: 12px;
 }
