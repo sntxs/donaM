@@ -1,6 +1,6 @@
 <template>
   <!-- Seção Sobre -->
-  <section id="about" class="py-16 bg-pink-50">
+  <section id="sobre" class="py-16 bg-pink-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
@@ -8,7 +8,8 @@
         </h2>
         <div class="w-24 h-1 bg-pink-600 mx-auto mt-4 mb-6"></div>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Criando deliciosas confeitarias com paixão e criatividade desde 2010.
+          Transformando carinho em sabor e momentos em memórias inesquecíveis
+          desde 2019.
         </p>
       </div>
 
@@ -109,30 +110,81 @@
           <img
             src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
             alt="Nossa cozinha de confeitaria"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="img-sobre rounded-lg shadow-lg object-cover"
           />
         </div>
         <div class="md:w-1/2">
           <h3 class="text-2xl font-bold text-gray-900 mb-4">
-            Nossa Paixão & Expertise
+            De Herança Familiar à Arte Confeiteira
           </h3>
-          <p class="text-gray-600 mb-4">
-            Fundada pela mestre confeiteira Maria Silva, DonaM começou como um
-            pequeno negócio familiar e cresceu para se tornar uma marca querida
-            conhecida por sua qualidade excepcional e criatividade.
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            Olá! Eu sou a Mara, tenho 55 anos e trago a confeitaria no coração
+            desde sempre, uma paixão que herdei da minha família. Cresci com o
+            cheirinho dos bolos da minha mãe invadindo a casa e foi ali que
+            descobri que confeitar é muito mais do que cozinhar:
+            <span class="text-pink-600 font-medium"
+              >é transformar carinho em sabor</span
+            >.
           </p>
-          <p class="text-gray-600 mb-4">
-            Nossa equipe de artesãos habilidosos combina técnicas tradicionais
-            com inovação moderna para criar confeitarias que são não apenas
-            deliciosas, mas visualmente deslumbrantes.
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            Em 2019, decidi transformar esse amor em algo ainda maior, e assim
+            nasceu a <span class="font-semibold">Dona M Confeitaria</span>.
+            Desde então, seguimos realizando sonhos através dessa
+            <span class="text-pink-600 font-medium">arte de confeitar</span>,
+            atendendo desde os pedidos mais tradicionais e refinados até os
+            bolos temáticos mais inusitados que se possam imaginar. Mas, perto
+            dos sabores de cada bolo, tudo isso se torna apenas um detalhe.
           </p>
-          <p class="text-gray-600">
-            Temos orgulho em criar experiências doces memoráveis para
-            casamentos, aniversários, eventos corporativos e indulgências do dia
-            a dia.
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Bem-vindos à Dona M Confeitaria, será um
+            <span class="text-pink-600 font-medium"
+              >prazer adoçar seus momentos especiais</span
+            >.
           </p>
+
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span
+              class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+              >Paixão</span
+            >
+            <span
+              class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+              >Tradição</span
+            >
+            <span
+              class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+              >Artesanal</span
+            >
+            <span
+              class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+              >Criatividade</span
+            >
+            <span
+              class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+              >Dedicação</span
+            >
+            <span
+              class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+              >Amor</span
+            >
+            <span
+              class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+              >Memórias</span
+            >
+            <span
+              class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+              >Sabor único</span
+            >
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+<style>
+.img-sobre {
+  height: 500px;
+  width: 800px;
+}
+</style>
+

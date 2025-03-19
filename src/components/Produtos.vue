@@ -1,6 +1,6 @@
 <template>
   <!-- Seção de Produtos -->
-  <section id="products" class="py-20">
+  <section id="produtos" class="py-20">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <span class="text-pink-600 font-medium text-sm uppercase tracking-wider"
@@ -46,7 +46,7 @@
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-5 rounded-full transition-all hover:shadow-md transform hover:-translate-y-1"
               >
-              <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
+              <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -74,7 +74,7 @@
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
+                <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -102,7 +102,7 @@
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a> 
+                <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a> 
               </button>
             </div>
           </div>
@@ -130,7 +130,7 @@
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-              <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
+              <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -158,7 +158,7 @@
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-              <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
+              <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -186,7 +186,7 @@
               <button
                 class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                <a @click="(e) => scrollToSection(e, '#contact')">Encomendar</a>
+                <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -195,7 +195,7 @@
 
       <div class="text-center mt-16">
         <a
-          @click="(e) => scrollToSection(e, '#contact')"
+          @click="(e) => scrollToSection(e, '#contato')"
           class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition-all hover:shadow-pink-900/70 cursor-pointer"
           >Solicite um Orçamento Personalizado</a
         >

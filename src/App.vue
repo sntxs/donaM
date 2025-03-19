@@ -22,22 +22,22 @@
                 >Início</a
               >
               <a
-                @click="(e) => scrollToSection(e, '#about')"
+                @click="(e) => scrollToSection(e, '#sobre')"
                 class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Sobre</a
               >
               <a
-                @click="(e) => scrollToSection(e, '#products')"
+                @click="(e) => scrollToSection(e, '#produtos')"
                 class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Produtos</a
               >
               <a
-                @click="(e) => scrollToSection(e, '#gallery')"
+                @click="(e) => scrollToSection(e, '#galeria')"
                 class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Galeria</a
               >
               <a
-                @click="(e) => scrollToSection(e, '#contact')"
+                @click="(e) => scrollToSection(e, '#contato')"
                 class="text-gray-900 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                 >Contato</a
               >
@@ -86,22 +86,22 @@
             >Início</a
           >
           <a
-            @click="(e) => { scrollToSection(e, '#about'); mobileMenuOpen = false; }"
+            @click="(e) => { scrollToSection(e, '#sobre'); mobileMenuOpen = false; }"
             class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Sobre</a
           >
           <a
-            @click="(e) => { scrollToSection(e, '#products'); mobileMenuOpen = false; }"
+            @click="(e) => { scrollToSection(e, '#produtos'); mobileMenuOpen = false; }"
             class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Produtos</a
           >
           <a
-            @click="(e) => { scrollToSection(e, '#gallery'); mobileMenuOpen = false; }"
+            @click="(e) => { scrollToSection(e, '#galeria'); mobileMenuOpen = false; }"
             class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Galeria</a
           >
           <a
-            @click="(e) => { scrollToSection(e, '#contact'); mobileMenuOpen = false; }"
+            @click="(e) => { scrollToSection(e, '#contato'); mobileMenuOpen = false; }"
             class="text-gray-900 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
             >Contato</a
           >

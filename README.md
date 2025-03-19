@@ -15,7 +15,7 @@ O site conta com as seguintes seções:
 
 - Vue.js
 - Tailwind CSS
-- Shadcn UI
+- Shadcn UI - Vue
 - TypeScript
 
 ## Como Rodar o Projeto
@@ -36,8 +36,5 @@ npm run dev
 
 Para adicionar seus próprios produtos:
 1. Adicione as imagens em `/public/images/`
-2. Modifique o array `products` em `src/App.vue`
+2. Modifique o array `produtos` em `src/App.vue`
 
-## Contato
-
-Para encomendas e mais informações, entre em contato através do WhatsApp ou Instagram.

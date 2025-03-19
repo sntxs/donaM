@@ -1,6 +1,6 @@
 <template>
   <!-- Seção de Galeria -->
-  <section id="gallery" class="py-16 bg-pink-50">
+  <section id="galeria" class="py-16 bg-pink-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
@@ -120,7 +120,7 @@
 
       <div class="text-center mt-12">
         <a
-          @click="(e) => scrollToSection(e, '#contact')"
+          @click="(e) => scrollToSection(e, '#contato')"
           class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition-all hover:shadow-pink-900/70 cursor-pointer"
           >Solicite um Catálogo Completo</a
         >

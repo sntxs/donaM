@@ -58,28 +58,28 @@
             </li>
             <li>
               <a
-                href="#about"
+                href="#sobre"
                 class="text-gray-400 hover:text-pink-500 transition-colors"
                 >Sobre Nós</a
               >
             </li>
             <li>
               <a
-                href="#products"
+                href="#produtos"
                 class="text-gray-400 hover:text-pink-500 transition-colors"
                 >Produtos</a
               >
             </li>
             <li>
               <a
-                href="#gallery"
+                href="#galeria"
                 class="text-gray-400 hover:text-pink-500 transition-colors"
                 >Galeria</a
               >
             </li>
             <li>
               <a
-                href="#contact"
+                href="#contato"
                 class="text-gray-400 hover:text-pink-500 transition-colors"
                 >Contato</a
               >
@@ -158,19 +158,51 @@
             </p>
           </div>
           <div class="flex space-x-6">
-            <a href="#" class="text-gray-400 hover:text-pink-400 text-sm"
+            <a 
+              @click="abrirPrivacidade" 
+              class="text-gray-400 hover:text-pink-400 text-sm cursor-pointer"
               >Política de Privacidade</a
             >
-            <a href="#" class="text-gray-400 hover:text-pink-400 text-sm"
+            <a 
+              @click="abrirTermos" 
+              class="text-gray-400 hover:text-pink-400 text-sm cursor-pointer"
               >Termos de Serviço</a
             >
           </div>
         </div>
       </div>
     </div>
+    
+    <!-- Uso do componente de modais -->
+    <TermosPrivacidadeModais 
+      :mostrarPrivacidade="showPrivacyModal"
+      :mostrarTermos="showTermsModal"
+      @atualizar:mostrarPrivacidade="showPrivacyModal = $event"
+      @atualizar:mostrarTermos="showTermsModal = $event"
+    />
   </footer>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import TermosPrivacidadeModais from './TermosPrivacidadeModais.vue';
+
 const currentYear = new Date().getFullYear();
+const showPrivacyModal = ref(false);
+const showTermsModal = ref(false);
+
+const abrirPrivacidade = () => {
+  showPrivacyModal.value = true;
+};
+
+const abrirTermos = () => {
+  showTermsModal.value = true;
+};
 </script>
+
+<style scoped>
+/* Animação suave para o modal */
+.fixed {
+  transition: opacity 0.2s ease-in-out;
+}
+</style>

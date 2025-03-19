@@ -21,12 +21,12 @@
             class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
           >
             <a
-              @click="(e) => scrollToSection(e, '#products')"
+              @click="(e) => scrollToSection(e, '#produtos')"
               class="cursor-pointer bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition-all hover:shadow-lg transform hover:-translate-y-1"
               >Explorar Produtos</a
             >
             <a
-              @click="(e) => scrollToSection(e, '#contact')"
+              @click="(e) => scrollToSection(e, '#contato')"
               class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >Fale Conosco</a
             >
