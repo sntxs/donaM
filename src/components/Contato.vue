@@ -263,13 +263,10 @@
                 <option value="" disabled selected>
                   Selecione um tipo de produto
                 </option>
-                <option value="Torta">Torta</option>
                 <option value="Bolo">Bolo</option>
-                <option value="Cupcakes">Cupcakes</option>
                 <option value="Docinhos">
                   Docinhos (brigadeiro, beijinho, etc.)
                 </option>
-                <option value="Macarons">Macarons</option>
                 <option value="Chocolates">Chocolates Artesanais</option>
                 <option value="Caramelos">Caramelos Especiais</option>
                 <option value="Kit Festa">Kit para Festa</option>
