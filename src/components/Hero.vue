@@ -22,7 +22,7 @@
           >
             <a
               @click="(e) => scrollToSection(e, '#produtos')"
-              class="cursor-pointer bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition-all hover:shadow-lg transform hover:-translate-y-1"
+              class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >Explorar Produtos</a
             >
             <a

@@ -6,7 +6,11 @@
         <!-- Coluna 1 -->
         <div>
           <!-- <h3 class="text-xl font-bold mb-4 font-script">Dona M Confeitaria</h3> -->
-          <img src="../assets/logo-donam.jpg" alt="Dona M Logo" class="h-14 w-14 mb-4 rounded-full" />
+          <img
+            src="../assets/logo-donam.jpg"
+            alt="Dona M Logo"
+            class="h-14 w-14 mb-4 rounded-full"
+          />
           <p class="text-gray-400 mb-4">
             Criando momentos doces e memoráveis desde 2010. Especialistas em
             confeitaria artesanal para todas as ocasiões.
@@ -14,7 +18,7 @@
           <div class="flex space-x-4">
             <a
               href="https://www.instagram.com/donamconfeitaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              class="text-gray-400 hover:text-pink-500 transition-colors"
+              class="text-gray-400 hover:text-pink-500 transition-colors instagram"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,36 +55,36 @@
           <ul class="space-y-2">
             <li>
               <a
-                href="#home"
-                class="text-gray-400 hover:text-pink-500 transition-colors"
+                @click="(e) => scrollToSection(e, '#home')"
+                class="text-gray-400 hover:text-pink-500 transition-colors cursor-pointer"
                 >Início</a
               >
             </li>
             <li>
               <a
-                href="#sobre"
-                class="text-gray-400 hover:text-pink-500 transition-colors"
+                @click="(e) => scrollToSection(e, '#sobre')"
+                class="text-gray-400 hover:text-pink-500 transition-colors cursor-pointer"
                 >Sobre Nós</a
               >
             </li>
             <li>
               <a
-                href="#produtos"
-                class="text-gray-400 hover:text-pink-500 transition-colors"
+                @click="(e) => scrollToSection(e, '#produtos')"
+                class="text-gray-400 hover:text-pink-500 transition-colors cursor-pointer"
                 >Produtos</a
               >
             </li>
             <li>
               <a
-                href="#galeria"
-                class="text-gray-400 hover:text-pink-500 transition-colors"
+                @click="(e) => scrollToSection(e, '#galeria')"
+                class="text-gray-400 hover:text-pink-500 transition-colors cursor-pointer"
                 >Galeria</a
               >
             </li>
             <li>
               <a
-                href="#contato"
-                class="text-gray-400 hover:text-pink-500 transition-colors"
+                @click="(e) => scrollToSection(e, '#contato')"
+                class="text-gray-400 hover:text-pink-500 transition-colors cursor-pointer"
                 >Contato</a
               >
             </li>
@@ -112,9 +116,11 @@
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <span class="text-gray-400"
-                >Rua das Flores, 123, São Paulo, SP</span
-              >
+              <span class="text-gray-400">
+                Rua Francisco Ruiz Morales, 276 <br />
+                Parque São Matheus <br />
+                Presidente Prudente, SP
+              </span>
             </li>
             <li class="flex items-start">
               <svg
@@ -128,7 +134,7 @@
                 />
               </svg>
               <a
-                href="https://wa.me/5518981453272"
+                href="https://api.whatsapp.com/send?phone=5518981453272&text=Olá+Dona+M,+tudo+bem%3F+😃&fbclid=PAZXh0bgNhZW0CMTEAAaYjqYz14GPzMY_rKxcyeXQutg6oD-rkevEHq9v9ZSUplG_kisaVC58fwhQ_aem_WXtmUGnCamVQeX-B-S82RA"
                 target="_blank"
                 class="text-gray-400"
               >
@@ -158,13 +164,13 @@
             </p>
           </div>
           <div class="flex space-x-6">
-            <a 
-              @click="abrirPrivacidade" 
+            <a
+              @click="abrirPrivacidade"
               class="text-gray-400 hover:text-pink-400 text-sm cursor-pointer"
               >Política de Privacidade</a
             >
-            <a 
-              @click="abrirTermos" 
+            <a
+              @click="abrirTermos"
               class="text-gray-400 hover:text-pink-400 text-sm cursor-pointer"
               >Termos de Serviço</a
             >
@@ -172,9 +178,9 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Uso do componente de modais -->
-    <TermosPrivacidadeModais 
+    <TermosPrivacidadeModais
       :mostrarPrivacidade="showPrivacyModal"
       :mostrarTermos="showTermsModal"
       @atualizar:mostrarPrivacidade="showPrivacyModal = $event"
@@ -184,8 +190,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import TermosPrivacidadeModais from './TermosPrivacidadeModais.vue';
+import { ref } from "vue";
+import TermosPrivacidadeModais from "./TermosPrivacidadeModais.vue";
 
 const currentYear = new Date().getFullYear();
 const showPrivacyModal = ref(false);
@@ -198,11 +204,26 @@ const abrirPrivacidade = () => {
 const abrirTermos = () => {
   showTermsModal.value = true;
 };
+
+const scrollToSection = (e, sectionId) => {
+  e.preventDefault();
+  const section = document.querySelector(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>
 
 <style scoped>
 /* Animação suave para o modal */
 .fixed {
   transition: opacity 0.2s ease-in-out;
+}
+
+.instagram {
+  color: rgb(146, 146, 146) !important;
+  &:hover {
+    color: #e1306c !important;
+  }
 }
 </style>

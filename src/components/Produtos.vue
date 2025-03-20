@@ -44,9 +44,9 @@
             <div class="flex justify-between items-center">
               <!-- <span class="text-pink-600 font-bold">R$25,00 - R$75,00</span> -->
               <button
-                class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-5 rounded-full transition-all hover:shadow-md transform hover:-translate-y-1"
+                class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >
-              <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
+                <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -72,7 +72,7 @@
             <div class="flex justify-between items-center">
               <!-- <span class="text-pink-600 font-bold">R$18,00 - R$45,00</span> -->
               <button
-                class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
+                class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >
                 <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
@@ -100,9 +100,9 @@
             <div class="flex justify-between items-center">
               <!-- <span class="text-pink-600 font-bold">R$15,00 - R$35,00</span> -->
               <button
-                class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
+                class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >
-                <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a> 
+                <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -128,9 +128,9 @@
             <div class="flex justify-between items-center">
               <!-- <span class="text-pink-600 font-bold">R$20,00 - R$50,00</span> -->
               <button
-                class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
+                class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >
-              <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
+                <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -156,9 +156,9 @@
             <div class="flex justify-between items-center">
               <!-- <span class="text-pink-600 font-bold">R$45,00 - R$120,00</span> -->
               <button
-                class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
+                class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >
-              <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
+                <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>
             </div>
           </div>
@@ -184,7 +184,7 @@
             <div class="flex justify-between items-center">
               <!-- <span class="text-pink-600 font-bold">R$60,00 - R$150,00</span> -->
               <button
-                class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md transition-colors"
+                class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >
                 <a @click="(e) => scrollToSection(e, '#contato')">Encomendar</a>
               </button>

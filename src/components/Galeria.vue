@@ -120,7 +120,8 @@
 
       <div class="text-center mt-12">
         <a
-          @click="(e) => scrollToSection(e, '#contato')"
+          href="https://api.whatsapp.com/send?phone=5518981453272&text=Olá+Dona+M,+tudo+bem%3F+Gostaria+que+me+enviasse+todo+o+seu+catálogo+😃&fbclid=PAZXh0bgNhZW0CMTEAAaYjqYz14GPzMY_rKxcyeXQutg6oD-rkevEHq9v9ZSUplG_kisaVC58fwhQ_aem_WXtmUGnCamVQeX-B-S82RA"
+          target="_blank"
           class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition-all hover:shadow-pink-900/70 cursor-pointer"
           >Solicite um Catálogo Completo</a
         >
@@ -128,13 +129,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-const scrollToSection = (event, sectionId) => {
-  event.preventDefault();
-  const section = document.querySelector(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-};
-</script>

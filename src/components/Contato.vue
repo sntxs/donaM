@@ -50,8 +50,9 @@
             <div>
               <h4 class="text-lg font-semibold text-gray-900 mb-1">Endereço</h4>
               <p class="text-gray-600">
-                Rua das Flores, 123<br />Jardim Primavera<br />São Paulo, SP
-                01234-567
+                Rua Francisco Ruiz Morales, 276 <br />
+                Parque São Matheus <br />
+                Presidente Prudente, SP
               </p>
             </div>
           </div>
@@ -76,7 +77,7 @@
             <div>
               <h4 class="text-lg font-semibold text-gray-900 mb-1">Telefone</h4>
               <a
-                href="https://wa.me/5518981453272"
+                href="https://api.whatsapp.com/send?phone=5518981453272&text=Olá+Dona+M,+tudo+bem%3F+😃&fbclid=PAZXh0bgNhZW0CMTEAAaYjqYz14GPzMY_rKxcyeXQutg6oD-rkevEHq9v9ZSUplG_kisaVC58fwhQ_aem_WXtmUGnCamVQeX-B-S82RA"
                 class="text-gray-600 hover:text-pink-600 transition-colors"
                 >(18) 98145-3272</a
               >
@@ -102,11 +103,9 @@
             </div>
             <div>
               <h4 class="text-lg font-semibold text-gray-900 mb-1">Email</h4>
-              <a
-                href="mailto:dona.m.confeitaria@gmail.com"
-                class="text-gray-600"
-                >dona.m.confeitaria@gmail.com</a
-              >
+              <a href="mailto:donamconfeitaria@gmail.com" class="text-gray-600">
+                donamconfeitaria@gmail.com
+              </a>
             </div>
           </div>
 
@@ -131,19 +130,16 @@
               <h4 class="text-lg font-semibold text-gray-900 mb-1">
                 Horário de Funcionamento
               </h4>
-              <p class="text-gray-600">
-                Segunda a Sexta: 9h às 18h<br />Sábado: 9h às 14h<br />Domingo:
-                Fechado
-              </p>
+              <p class="text-gray-600">Somente agendamentos.</p>
             </div>
           </div>
 
-          <div class="mt-8">
+          <div class="my-8">
             <h4 class="text-lg font-semibold text-gray-900 mb-4">Siga-nos</h4>
             <div class="flex space-x-4">
               <a
                 href="https://www.instagram.com/donamconfeitaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                class="text-gray-400 hover:text-pink-500 transition-colors"
+                class="text-gray-400 hover:text-pink-500 transition-colors instagram"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -172,6 +168,20 @@
                 </svg>
               </a>
             </div>
+          </div>
+
+          <div
+            class="w-full max-w-md h-64 rounded-lg overflow-hidden shadow-lg"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.652000755591!2d-51.40921052483971!3d-22.101103279830294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f69e3835375f%3A0x287db9ec871db227!2sR.%20Francisco%20Ruiz%20Morales%2C%20276%20-%20Parque%20Sao%20Matheus%2C%20Pres.%20Prudente%20-%20SP%2C%2019025-410!5e0!3m2!1spt-BR!2sbr!4v1742486754622!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
 
@@ -304,15 +314,22 @@
                 </div>
                 <div class="ml-3 text-sm">
                   <label for="termos" class="text-gray-700">
-                    Li e concordo com os 
-                    <a @click.prevent="abrirTermos" class="text-pink-600 underline cursor-pointer">Termos de Serviço</a>
+                    Li e concordo com os
+                    <a
+                      @click.prevent="abrirTermos"
+                      class="text-pink-600 underline cursor-pointer"
+                      >Termos de Serviço</a
+                    >
                   </label>
-                  <p v-if="erros.aceitaTermos" class="text-red-500 text-sm mt-1">
+                  <p
+                    v-if="erros.aceitaTermos"
+                    class="text-red-500 text-sm mt-1"
+                  >
                     {{ erros.aceitaTermos }}
                   </p>
                 </div>
               </div>
-              
+
               <div class="flex items-start">
                 <div class="flex items-center h-5">
                   <input
@@ -326,14 +343,27 @@
                 </div>
                 <div class="ml-3 text-sm">
                   <label for="privacidade" class="text-gray-700">
-                    Li e concordo com a 
-                    <a @click.prevent="abrirPrivacidade" class="text-pink-600 underline cursor-pointer">Política de Privacidade</a>
+                    Li e concordo com a
+                    <a
+                      @click.prevent="abrirPrivacidade"
+                      class="text-pink-600 underline cursor-pointer"
+                      >Política de Privacidade</a
+                    >
                   </label>
-                  <p v-if="erros.aceitaPrivacidade" class="text-red-500 text-sm mt-1">
+                  <p
+                    v-if="erros.aceitaPrivacidade"
+                    class="text-red-500 text-sm mt-1"
+                  >
                     {{ erros.aceitaPrivacidade }}
                   </p>
                 </div>
               </div>
+              <p
+                v-if="!formData.aceitaTermos || !formData.aceitaPrivacidade"
+                class="text-gray-600 opacity-50 text-sm mb-2"
+              >
+                *Você precisa concordar com ambos os termos para prosseguir
+              </p>
             </div>
 
             <!-- Atualização do botão de enviar com estado desabilitado -->
@@ -342,9 +372,9 @@
               :disabled="!formData.aceitaTermos || !formData.aceitaPrivacidade"
               :class="[
                 'w-full font-medium py-3 px-6 rounded-lg transition-all flex items-center justify-center',
-                (!formData.aceitaTermos || !formData.aceitaPrivacidade) 
-                  ? 'bg-gray-400 cursor-not-allowed opacity-70' 
-                  : 'bg-pink-600 hover:bg-pink-700 text-white hover:shadow-lg transform hover:-translate-y-1'
+                !formData.aceitaTermos || !formData.aceitaPrivacidade
+                  ? 'bg-gray-400 cursor-not-allowed opacity-70'
+                  : 'bg-pink-600 hover:bg-pink-700 text-white hover:shadow-lg transform hover:-translate-y-1',
               ]"
             >
               <svg
@@ -357,16 +387,12 @@
                   d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
                 />
               </svg>
-              {{ (!formData.aceitaTermos || !formData.aceitaPrivacidade) 
-                ? 'Aceite os termos para continuar' 
-                : 'Enviar Pedido via WhatsApp' 
+              {{
+                !formData.aceitaTermos || !formData.aceitaPrivacidade
+                  ? "Aceite os termos para continuar"
+                  : "Enviar Pedido via WhatsApp"
               }}
             </button>
-
-            <!-- Adicione uma mensagem informativa abaixo -->
-            <p v-if="!formData.aceitaTermos || !formData.aceitaPrivacidade" class="text-amber-600 text-sm text-center mt-2">
-              Você precisa concordar com ambos os termos para prosseguir
-            </p>
 
             <p class="text-gray-600 text-sm text-center mt-4">
               Ao enviar, você será redirecionado para o WhatsApp com seu pedido
@@ -387,7 +413,7 @@
   </section>
 
   <!-- Uso do componente de modais -->
-  <TermosPrivacidadeModais 
+  <TermosPrivacidadeModais
     :mostrarPrivacidade="showPrivacyModal"
     :mostrarTermos="showTermsModal"
     @atualizar:mostrarPrivacidade="showPrivacyModal = $event"
@@ -406,7 +432,7 @@ const formData = ref({
   produto: "",
   mensagem: "",
   aceitaTermos: false,
-  aceitaPrivacidade: false
+  aceitaPrivacidade: false,
 });
 
 const erros = ref({
@@ -416,7 +442,7 @@ const erros = ref({
   produto: "",
   mensagem: "",
   aceitaTermos: "",
-  aceitaPrivacidade: ""
+  aceitaPrivacidade: "",
 });
 
 // Controle dos modais
@@ -454,11 +480,9 @@ const validarEmail = () => {
   }
 };
 
-// Máscara e validação para telefone
 const mascararTelefone = () => {
-  // Remove todos os caracteres não numéricos
   let telefone = formData.value.telefone.replace(/\D/g, "");
-  
+
   // Aplica a máscara dependendo da quantidade de dígitos
   if (telefone.length <= 10) {
     // Formato (00) 0000-0000 para telefones fixos
@@ -470,11 +494,14 @@ const mascararTelefone = () => {
     }
   } else {
     // Formato (00) 00000-0000 para celulares
-    telefone = `(${telefone.substring(0, 2)}) ${telefone.substring(2, 7)}-${telefone.substring(7, 11)}`;
+    telefone = `(${telefone.substring(0, 2)}) ${telefone.substring(
+      2,
+      7
+    )}-${telefone.substring(7, 11)}`;
   }
-  
+
   formData.value.telefone = telefone;
-  
+
   // Validação do telefone
   const numerosTelefone = formData.value.telefone.replace(/\D/g, "");
   if (numerosTelefone.length < 10) {
@@ -507,7 +534,8 @@ const validarMensagem = () => {
 // Adicionar validações para os novos campos
 const validarTermos = () => {
   if (!formData.value.aceitaTermos) {
-    erros.value.aceitaTermos = "É necessário concordar com os termos de serviço para continuar.";
+    erros.value.aceitaTermos =
+      "É necessário concordar com os termos de serviço para continuar.";
   } else {
     erros.value.aceitaTermos = "";
   }
@@ -515,7 +543,8 @@ const validarTermos = () => {
 
 const validarPrivacidade = () => {
   if (!formData.value.aceitaPrivacidade) {
-    erros.value.aceitaPrivacidade = "É necessário concordar com a política de privacidade para continuar.";
+    erros.value.aceitaPrivacidade =
+      "É necessário concordar com a política de privacidade para continuar.";
   } else {
     erros.value.aceitaPrivacidade = "";
   }
@@ -530,13 +559,13 @@ const validarFormulario = () => {
   validarMensagem();
   validarTermos();
   validarPrivacidade();
-  
+
   // Verifica se o telefone está válido
   const numerosTelefone = formData.value.telefone.replace(/\D/g, "");
   if (numerosTelefone.length < 10) {
     erros.value.telefone = "Por favor, informe um telefone válido.";
   }
-  
+
   // Verifica se existem erros
   for (const erro in erros.value) {
     if (erros.value[erro]) {
@@ -544,7 +573,7 @@ const validarFormulario = () => {
       return;
     }
   }
-  
+
   // Se não houver erros, envia para o WhatsApp
   enviarParaWhatsApp();
 };
@@ -567,7 +596,9 @@ ${formData.value.mensagem}
 *Consentimentos:*
 ✅ Concordou com os Termos de Serviço
 ✅ Concordou com a Política de Privacidade
-Data do consentimento: ${new Date().toLocaleDateString('pt-BR')} às ${new Date().toLocaleTimeString('pt-BR')}`;
+Data do consentimento: ${new Date().toLocaleDateString(
+    "pt-BR"
+  )} às ${new Date().toLocaleTimeString("pt-BR")}`;
 
   // Codificar a mensagem para URL
   const mensagemCodificada = encodeURIComponent(mensagem);
@@ -582,3 +613,12 @@ Data do consentimento: ${new Date().toLocaleDateString('pt-BR')} às ${new Date(
   window.open(urlWhatsapp, "_blank");
 };
 </script>
+
+<style scoped>
+.instagram {
+  color: rgb(170, 170, 170) !important;
+  &:hover {
+    color: #e1306c !important;
+  }
+}
+</style>
