@@ -263,14 +263,24 @@
                 <option value="" disabled selected>
                   Selecione um tipo de produto
                 </option>
-                <option value="Bolo">Bolo</option>
-                <option value="Docinhos">
-                  Docinhos (brigadeiro, beijinho, etc.)
-                </option>
-                <option value="Chocolates">Chocolates Artesanais</option>
-                <option value="Caramelos">Caramelos Especiais</option>
-                <option value="Kit Festa">Kit para Festa</option>
+                <option value="Bento Cake">Bento Cake</option>
+                <option value="Bolo de Pote">Bolo de Pote</option>
+                <option value="Bolo Decorado">Bolo Decorado</option>
+                <option value="Bolo Personalizado">Bolo Personalizado</option>
+                <option value="Bolo Refinado/Chique">Bolo Refinado/Chique</option>
+                <option value="Bolo Temático">Bolo Temático</option>
+                <option value="Bolo Tradicional">Bolo Tradicional</option>
+                <option value="Bombom de Morango">Bombom de Morango</option>
+                <option value="Brownies">Brownies</option>
                 <option value="Caixas de Presente">Caixas de Presente</option>
+                <option value="Caramelos">Caramelos Especiais</option>
+                <option value="Chocolates">Chocolates Artesanais</option>
+                <option value="Cookies">Cookies</option>
+                <option value="Docinhos">Docinhos (brigadeiro, beijinho, etc.)</option>
+                <option value="Kit Festa">Kit para Festa</option>
+                <option value="Mini Bolo">Mini Bolo</option>
+                <option value="Slice Cake">Slice Cake (Bolo em Fatia)</option>
+                <option value="Sobremesa na Taça">Sobremesa na Taça</option>
                 <option value="Outro">Outro</option>
               </select>
               <p v-if="erros.produto" class="text-red-500 text-sm mt-1">
