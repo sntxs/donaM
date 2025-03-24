@@ -22,5 +22,5 @@ export default defineConfig({
     rollupOptions: {
     }
   },
-  assetsInclude: ['**/*.JPG'],
+  assetsInclude: ['**/*.JPG', '**/*.jpg'],
 })

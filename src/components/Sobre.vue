@@ -108,7 +108,7 @@
       <div class="mt-16 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
           <img
-            src="../assets/produtos/IMG_5700.jpg"
+            src="@/assets/produtos/IMG_5700.jpg"
             alt="Nossa cozinha de confeitaria"
             class="img-sobre rounded-lg shadow-lg object-cover"
           />
