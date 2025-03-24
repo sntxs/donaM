@@ -22,12 +22,12 @@
           >
             <a
               @click="(e) => scrollToSection(e, '#produtos')"
-              class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
+              class="cursor-pointer border-2 border-pink-600 text-center text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >Explorar Produtos</a
             >
             <a
               @click="(e) => scrollToSection(e, '#contato')"
-              class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
+              class="cursor-pointer border-2 border-pink-600 text-center text-pink-600 font-medium py-3 px-8 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70"
               >Fale Conosco</a
             >
           </div>
@@ -38,9 +38,9 @@
               class="absolute -inset-4 bg-pink-200 rounded-full opacity-30 blur-xl"
             ></div>
             <img
-              src="https://images.unsplash.com/photo-1587314168485-3236d6710814?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Confeitaria sortida"
-              class="relative rounded-xl shadow-xl w-full h-auto object-cover"
+              src="../assets/produtos/cake-box.jpg"
+              alt="Cake Box"
+              class="img-hero relative rounded-xl shadow-xl w-full object-cover"
             />
           </div>
         </div>
@@ -58,3 +58,9 @@ const scrollToSection = (event, sectionId) => {
   }
 };
 </script>
+
+<style scoped>
+.img-hero {
+  max-height: 550px;
+}
+</style>

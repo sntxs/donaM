@@ -108,7 +108,7 @@
       <div class="mt-16 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
           <img
-            src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            src="../assets/produtos/IMG_5700.jpg"
             alt="Nossa cozinha de confeitaria"
             class="img-sobre rounded-lg shadow-lg object-cover"
           />
@@ -183,8 +183,9 @@
 </template>
 <style>
 .img-sobre {
-  height: 500px;
+  height: 600px;
   width: 800px;
+
 }
 </style>
 

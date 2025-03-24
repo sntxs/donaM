@@ -13,112 +13,73 @@
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div class="relative overflow-hidden rounded-lg group">
+        <!-- Imagens que sempre são mostradas (as primeiras 8) -->
+        <div
+          v-for="(item, index) in primeirasImagens"
+          :key="`fixed-${index}`"
+          class="relative overflow-hidden rounded-lg group"
+        >
           <img
-            src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Chocolates"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            :src="item.imagem"
+            :alt="item.titulo"
+            class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
           >
-            <p class="text-white font-medium p-4">Chocolates Belgas</p>
+            <p class="text-white font-medium p-4">{{ item.titulo }}</p>
           </div>
         </div>
 
-        <div class="relative overflow-hidden rounded-lg group">
-          <img
-            src="https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Macarons"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
+        <!-- Imagens adicionais que recebem animação -->
+        <transition-group name="gallery-fade" tag="div" class="contents">
           <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
+            v-for="(item, index) in imagensAdicionais"
+            :key="`extra-${index}`"
+            class="relative overflow-hidden rounded-lg group"
           >
-            <p class="text-white font-medium p-4">Macarons Coloridos</p>
+            <img
+              :src="item.imagem"
+              :alt="item.titulo"
+              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
+            >
+              <p class="text-white font-medium p-4">{{ item.titulo }}</p>
+            </div>
           </div>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <img
-            src="https://images.unsplash.com/photo-1551404973-761c83cd8339?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Torta"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-          >
-            <p class="text-white font-medium p-4">Torta de Frutas Vermelhas</p>
-          </div>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <img
-            src="https://images.unsplash.com/photo-1587314168485-3236d6710814?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Doces variados"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-          >
-            <p class="text-white font-medium p-4">Seleção de Doces</p>
-          </div>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <img
-            src="https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Brigadeiros"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-          >
-            <p class="text-white font-medium p-4">Brigadeiros Gourmet</p>
-          </div>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <img
-            src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Cupcakes"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-          >
-            <p class="text-white font-medium p-4">Cupcakes Decorados</p>
-          </div>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <img
-            src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Cookies"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-          >
-            <p class="text-white font-medium p-4">Cookies Artesanais</p>
-          </div>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <img
-            src="https://images.unsplash.com/photo-1514517604298-cf80e0fb7f1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Doces para festas"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-          >
-            <p class="text-white font-medium p-4">Doces para Eventos</p>
-          </div>
-        </div>
+        </transition-group>
       </div>
 
-      <div class="text-center mt-12">
+      <!-- Botão Ver Mais/Menos com animação -->
+      <div class="text-center mt-8">
+        <button
+          @click="toggleMostrarMais"
+          class="cursor-pointer border-2 border-pink-600 text-pink-600 font-medium py-1 px-6 rounded-full transition-all hover:shadow-md hover:shadow-pink-900/70 transform hover:scale-105 duration-300"
+        >
+          <span class="inline-flex items-center">
+            {{ mostrarTodas ? "Ver Menos" : "Ver Mais" }}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 ml-2 transition-transform duration-300"
+              :class="mostrarTodas ? 'rotate-180' : ''"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="text-center mt-4">
         <a
           href="https://api.whatsapp.com/send?phone=5518981453272&text=Olá+Dona+M,+tudo+bem%3F+Gostaria+que+me+enviasse+todo+o+seu+catálogo+😃&fbclid=PAZXh0bgNhZW0CMTEAAaYjqYz14GPzMY_rKxcyeXQutg6oD-rkevEHq9v9ZSUplG_kisaVC58fwhQ_aem_WXtmUGnCamVQeX-B-S82RA"
           target="_blank"
@@ -129,3 +90,95 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, computed } from "vue";
+
+// Importar todas as imagens
+import img0212 from "../assets/galeria/IMG_0212.jpg";
+import img1552 from "../assets/galeria/IMG_1552.jpg";
+import img2846 from "../assets/galeria/IMG_2846.jpg";
+import img3370 from "../assets/galeria/IMG_3370.jpg";
+import img4286 from "../assets/galeria/IMG_4286.jpg";
+import img4640 from "../assets/galeria/IMG_4640.jpg";
+import img5326 from "../assets/galeria/IMG_5326.jpg";
+import img5436 from "../assets/galeria/IMG_5436.jpg";
+import img5578 from "../assets/galeria/IMG_5578.jpg";
+import img6034 from "../assets/galeria/IMG_6034.jpg";
+import img6756 from "../assets/galeria/IMG_6756.jpg";
+import img6867 from "../assets/galeria/IMG_6867.jpg";
+import img9540 from "../assets/galeria/IMG_9540.jpg";
+
+const todasImagens = [
+  { imagem: img0212, titulo: "Bolo Decorativo" },
+  { imagem: img1552, titulo: "Bolo de Aniversário" },
+  { imagem: img2846, titulo: "Bolo Diferenciado" },
+  { imagem: img3370, titulo: "Bolo Especial" },
+  { imagem: img4286, titulo: "Bolo Quadrado" },
+  { imagem: img4640, titulo: "Bolo Especial" },
+  { imagem: img5326, titulo: "Bolo de Aniversário" },
+  { imagem: img5436, titulo: "Bolo Exclusivo" },
+  { imagem: img5578, titulo: "Bolo de Aniversário" },
+  { imagem: img6034, titulo: "Bolo de Aniversário" },
+  { imagem: img6756, titulo: "Bolo de Chocolate" },
+  { imagem: img6867, titulo: "Bolo Especial" },
+  { imagem: img9540, titulo: "Bolo de Aniversário" },
+];
+
+// Quantidade inicial de imagens a mostrar
+const quantidadeInicial = 4;
+
+// Estado para controlar se mostra todas as imagens ou não
+const mostrarTodas = ref(false);
+
+// Computed property para as primeiras imagens (sempre visíveis)
+const primeirasImagens = computed(() => {
+  return todasImagens.slice(0, quantidadeInicial);
+});
+
+// Computed property para as imagens adicionais (que serão animadas)
+const imagensAdicionais = computed(() => {
+  return mostrarTodas.value ? todasImagens.slice(quantidadeInicial) : [];
+});
+
+// Função para alternar entre mostrar mais/menos imagens
+const toggleMostrarMais = () => {
+  mostrarTodas.value = !mostrarTodas.value;
+};
+</script>
+
+<style scoped>
+/* Animações para a galeria */
+.gallery-fade-enter-active,
+.gallery-fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.gallery-fade-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.gallery-fade-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Garante que os itens apareçam com tempos levemente diferentes */
+.gallery-fade-enter-from:nth-child(2n) {
+  transition-delay: 0.1s;
+}
+
+.gallery-fade-enter-from:nth-child(3n) {
+  transition-delay: 0.2s;
+}
+
+.gallery-fade-enter-from:nth-child(4n) {
+  transition-delay: 0.3s;
+}
+
+/* Para o componente "contents" */
+.contents {
+  display: contents;
+}
+</style>
