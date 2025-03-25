@@ -38,7 +38,7 @@
               class="absolute -inset-4 bg-pink-200 rounded-full opacity-30 blur-xl"
             ></div>
             <img
-              src="../assets/produtos/cake-box.jpg"
+              src="https://res.cloudinary.com/dgbo657qq/image/upload/v1742860163/cake-box_ohzvux.jpg"
               alt="Cake Box"
               class="img-hero relative rounded-xl shadow-xl w-full object-cover"
             />
