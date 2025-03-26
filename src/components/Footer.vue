@@ -12,7 +12,7 @@
             class="h-14 w-14 mb-4 rounded-full"
           />
           <p class="text-gray-400 mb-4">
-            Criando momentos doces e memoráveis desde 2010. Especialistas em
+            Criando momentos doces e memoráveis desde 2019. Especialistas em
             confeitaria artesanal para todas as ocasiões.
           </p>
           <div class="flex space-x-4">
